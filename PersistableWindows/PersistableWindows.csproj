@@ -9,6 +9,8 @@
 
         <EmitCompilerGeneratedFiles>true</EmitCompilerGeneratedFiles>
         <CompilerGeneratedFilesOutputPath>C:\Users\dsikes\Desktop\SourceGeneratedFilesPersistable</CompilerGeneratedFilesOutputPath>
+        <Configurations>Debug</Configurations>
+        <Platforms>x64</Platforms>
     </PropertyGroup>
 
     <ItemGroup>
