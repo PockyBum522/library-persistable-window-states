@@ -12,7 +12,7 @@
         <RootNamespace>PersistableWindows.IntegrationTests</RootNamespace>
 
         <EmitCompilerGeneratedFiles>true</EmitCompilerGeneratedFiles>
-        <CompilerGeneratedFilesOutputPath>C:\Users\dsikes\Desktop\SourceGeneratedFiles</CompilerGeneratedFilesOutputPath>
+<!--        <CompilerGeneratedFilesOutputPath>C:\Users\dsikes\Desktop\SourceGeneratedFiles</CompilerGeneratedFilesOutputPath>-->
         <Configurations>Debug</Configurations>
         <Platforms>x64</Platforms>
 
