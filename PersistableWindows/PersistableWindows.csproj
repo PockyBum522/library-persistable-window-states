@@ -8,12 +8,12 @@
         <RootNamespace>PersistableWindows</RootNamespace>
 
         <EmitCompilerGeneratedFiles>true</EmitCompilerGeneratedFiles>
-<!--        <CompilerGeneratedFilesOutputPath>C:\Users\dsikes\Desktop\SourceGeneratedFilesPersistable</CompilerGeneratedFilesOutputPath>-->
         <Configurations>Debug;Release</Configurations>
         <Platforms>x64</Platforms>
     </PropertyGroup>
 
     <ItemGroup>
+      <PackageReference Include="CommunityToolkit.Mvvm" Version="8.0.0" />
       <PackageReference Include="JetBrains.Annotations" Version="2022.1.0" />
     </ItemGroup>
 

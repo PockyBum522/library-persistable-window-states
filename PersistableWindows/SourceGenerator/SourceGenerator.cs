@@ -18,7 +18,10 @@ public class PersistableWindowsSourceGenerator : ISourceGenerator
 
     private string BuildOutputCode(MainSyntaxReceiver mainSyntaxReceiver)
     {
-        var outputCode = "using PersistableWindows;";
+        var outputCode = $"using PersistableWindows;{Environment.NewLine}";
+        
+        outputCode += $"using CommunityToolkit.Mvvm.ComponentModel;{Environment.NewLine}";
+        outputCode += $"using CommunityToolkit.Mvvm.Input;{Environment.NewLine}";
 
         foreach (var capture in mainSyntaxReceiver.Captured)
         { 
@@ -42,22 +45,55 @@ namespace " + namespaceFullName + @"
         /// <summary>
         /// The window distance from top of screen 0, so that we can bind to it
         /// </summary>
-        public double Top { get; set; }
+        public double Top
+        {
+            get => _top;
+            set
+            {
+                SetProperty(ref _top, value);
+            }            
+        }
         
         /// <summary>
         /// The window distance from left side of screen 0, so that we can bind to it
         /// </summary>
-        public double Left { get; set; }
+        public double Left
+        {
+            get => _left;
+            set
+            {
+                SetProperty(ref _left, value);
+            }            
+        }
 
         /// <summary>
         /// The window height, so that we can bind to it
         /// </summary>
-        public double Height { get; set; }
+        public double Height
+        {
+            get => _width;
+            set
+            {
+                SetProperty(ref _width, value);
+            }            
+        }
         
         /// <summary>
         /// The window width, so that we can bind to it
         /// </summary>
-        public double Width { get; set; }
+        public double Width
+        {
+            get => _height;
+            set
+            {
+                SetProperty(ref _height, value);
+            }            
+        }
+
+        private double _top = 100;
+        private double _left = 100;
+        private double _width = 800;
+        private double _height = 800;
 
         private void SaveWindowState()
         {
