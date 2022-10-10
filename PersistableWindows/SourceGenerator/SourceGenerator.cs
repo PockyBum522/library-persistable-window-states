@@ -34,10 +34,29 @@ namespace " + namespaceFullName + @"
 {
     public partial class " + capture.FoundClass.Identifier.Text + @" : IPersistableWindow
     {
+        /// <summary>
+        /// The window GUID, must be unique to each individual window
+        /// </summary>
         public string WindowGuid => " + attributeWindowGuid + @";
+
+        /// <summary>
+        /// The window distance from top of screen 0, so that we can bind to it
+        /// </summary>
         public double Top { get; set; }
+        
+        /// <summary>
+        /// The window distance from left side of screen 0, so that we can bind to it
+        /// </summary>
         public double Left { get; set; }
+
+        /// <summary>
+        /// The window height, so that we can bind to it
+        /// </summary>
         public double Height { get; set; }
+        
+        /// <summary>
+        /// The window width, so that we can bind to it
+        /// </summary>
         public double Width { get; set; }
 
         private void SaveWindowState()
