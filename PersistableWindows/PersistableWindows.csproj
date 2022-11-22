@@ -6,19 +6,21 @@
         <Nullable>enable</Nullable>
         <AssemblyName>PersistableWindows</AssemblyName>
         <RootNamespace>PersistableWindows</RootNamespace>
-
         <EmitCompilerGeneratedFiles>true</EmitCompilerGeneratedFiles>
         <Configurations>Debug;Release</Configurations>
         <Platforms>x64</Platforms>
+        <Version>3.0.1</Version>
+        <AssemblyVersion>3.0.1</AssemblyVersion>
+        <FileVersion>3.0.1</FileVersion>
     </PropertyGroup>
 
     <ItemGroup>
       <PackageReference Include="CommunityToolkit.Mvvm" Version="8.0.0" />
-      <PackageReference Include="JetBrains.Annotations" Version="2022.1.0" />
+      <PackageReference Include="JetBrains.Annotations" Version="2022.3.1" />
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.0.1" PrivateAssets="all" />
+        <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.4.0" PrivateAssets="all" />
         <PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="3.3.3">
             <PrivateAssets>all</PrivateAssets>
             <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
