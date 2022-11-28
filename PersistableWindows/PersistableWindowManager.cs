@@ -56,7 +56,7 @@ public class PersistableWindowManager
             Path.Join(
                 LibraryPaths.PathPersistableWindowDataLocation, 
                 $"{windowGuid}.lastState");
-        
+
         var windowLastSavedState = DeserializeLastStateFile(stateFilePath);
         
         windowToSaveDataFor.Top = windowLastSavedState.LocationTop;
@@ -77,7 +77,16 @@ public class PersistableWindowManager
             var fs = new FileStream(stateFilePath, FileMode.OpenOrCreate);
             var reader = new StreamReader(fs);
 
-            var rawState = serializer.Deserialize(reader);
+            object? rawState = null;
+
+            try
+            {
+                rawState = serializer.Deserialize(reader);
+            }
+            catch (InvalidOperationException)
+            {
+                
+            }
 
             if (rawState is null)
             {
