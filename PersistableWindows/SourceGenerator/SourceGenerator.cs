@@ -19,10 +19,9 @@ public class PersistableWindowsSourceGenerator : ISourceGenerator
     private string BuildOutputCode(MainSyntaxReceiver mainSyntaxReceiver)
     {
         var outputCode = $"using PersistableWindows;{Environment.NewLine}";
-        
         outputCode += $"using CommunityToolkit.Mvvm.ComponentModel;{Environment.NewLine}";
         outputCode += $"using CommunityToolkit.Mvvm.Input;{Environment.NewLine}";
-
+        
         foreach (var capture in mainSyntaxReceiver.Captured)
         { 
             var attributeFirstArgument = capture.FoundAttribute.ArgumentList?.Arguments.First();
@@ -35,7 +34,7 @@ public class PersistableWindowsSourceGenerator : ISourceGenerator
 
 namespace " + namespaceFullName + @"
 {
-    public partial class " + capture.FoundClass.Identifier.Text + @" : IPersistableWindow
+    public partial class " + capture.FoundClass.Identifier.Text + @" : ObservableObject, IPersistableWindow 
     {
         /// <summary>
         /// The window GUID, must be unique to each individual window
